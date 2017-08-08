@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerSlider" customModule="Player" customModuleProvider="target">
+            <connections>
+                <outlet property="pastLabel" destination="NvC-Zm-lUs" id="SqV-ph-g7j"/>
+                <outlet property="remainLabel" destination="jK9-au-4hn" id="Woo-DP-xxk"/>
+                <outlet property="sliderView" destination="vZ5-Pq-emP" id="JtI-KC-8a4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="454" height="115"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vZ5-Pq-emP">
+                    <rect key="frame" x="28" y="0.0" width="398" height="31"/>
+                    <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="maximumTrackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="sliderValueDidChanged:" destination="-1" eventType="valueChanged" id="jOe-Jr-3BX"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK9-au-4hn">
+                    <rect key="frame" x="390" y="38" width="34" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvC-Zm-lUs">
+                    <rect key="frame" x="30" y="38" width="34" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jK9-au-4hn" firstAttribute="top" secondItem="vZ5-Pq-emP" secondAttribute="bottom" constant="8" id="BGl-xO-vDR"/>
+                <constraint firstItem="NvC-Zm-lUs" firstAttribute="top" secondItem="vZ5-Pq-emP" secondAttribute="bottom" constant="8" id="Ftx-Zq-p59"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jK9-au-4hn" secondAttribute="bottom" id="H6b-1E-lWX"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="NvC-Zm-lUs" secondAttribute="bottom" id="S3f-QG-aWK"/>
+                <constraint firstItem="jK9-au-4hn" firstAttribute="trailing" secondItem="vZ5-Pq-emP" secondAttribute="trailing" id="Tut-UQ-INL"/>
+                <constraint firstAttribute="trailing" secondItem="vZ5-Pq-emP" secondAttribute="trailing" constant="30" id="eZL-Mr-xes"/>
+                <constraint firstItem="vZ5-Pq-emP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="efH-Tw-Prk"/>
+                <constraint firstItem="vZ5-Pq-emP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fvF-Me-q2y"/>
+                <constraint firstItem="vZ5-Pq-emP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="in0-Zb-ADZ"/>
+                <constraint firstItem="NvC-Zm-lUs" firstAttribute="leading" secondItem="vZ5-Pq-emP" secondAttribute="leading" id="sgT-OZ-cbr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-34" y="-422.5"/>
+        </view>
+    </objects>
+</document>

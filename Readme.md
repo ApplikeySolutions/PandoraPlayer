@@ -1,6 +1,6 @@
 ![ios](https://cocoapod-badges.herokuapp.com/v/PandoraPlayer/badge.png) ![ios](https://cocoapod-badges.herokuapp.com/p/PandoraPlayer/badge.png) ![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg) ![GitHub license](https://cocoapod-badges.herokuapp.com/l/PandoraPlayer/badge.(png|svg))
 
-[![Applikey](https://f.flockusercontent2.com/2a4adb31501671850a1f2a39)](https://applikeysolutions.com)
+Made by [Applikey Solutions](https://applikeysolutions.com)
 
 Find this [project on Dribbble](https://dribbble.com/shots/3456425-Music-waves).
 

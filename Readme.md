@@ -2,7 +2,7 @@
 
 Made by [Applikey Solutions](https://applikeysolutions.com)
 
-Find this [project on Dribbble](https://dribbble.com/shots/3456425-Music-waves).
+Find this [project on Dribbble](https://dribbble.com/shots/3456425-Music-waves)
 
 ![PandoraPlayer](https://f.flockusercontent2.com/2a4adb31502114757e42a129)
 
@@ -14,7 +14,8 @@ Find this [project on Dribbble](https://dribbble.com/shots/3456425-Music-waves).
 5. [Usage](#usage)
 6. [Demo](#demo)
 7. [Release Notes](#release-notes)
-7. [License](#license)
+8. [Contact Us](#contact-us)
+9. [License](#license)
 
 # Purpose
 
@@ -56,6 +57,10 @@ navigationController?.present(playerVC, animated: true, completion: nil)
 Version 1.0
 
 - Release version.
+
+# Contact Us
+
+You can always contact us via github@applikey.biz We are open for any inquiries regarding our libraries and controls, new open-source projects and other ways of contributing to the community. If you have used our component in your project we would be extremely happy if you write us your feedback and let us know about it!
 
 # License
 

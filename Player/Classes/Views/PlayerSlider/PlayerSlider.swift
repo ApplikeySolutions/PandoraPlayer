@@ -86,11 +86,11 @@ class PlayerSlider: ViewWithXib {
 		self.sliderView.setThumbImage(UIImage(named: Images.sliderThumb, in: Bundle(for: self.classForCoder), compatibleWith: nil), for: .normal)
 	}
 	
-	@objc dynamic private func dragDidBegin() {
+	@objc private func dragDidBegin() {
 		isDragging = true
 	}
 	
-	@objc dynamic private func dragDidEnd() {
+	@objc private func dragDidEnd() {
 		self.isDragging = false
 		self.notifyDelegate()
 	}

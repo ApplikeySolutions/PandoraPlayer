@@ -88,7 +88,7 @@ class PlayerSongList: ViewWithXib {
         updateCellSizes()
     }
     
-	@objc private dynamic func doubleTapped(g: UIGestureRecognizer) {
+	@objc private func doubleTapped(g: UIGestureRecognizer) {
 		delegate?.didTap()
 	}
 

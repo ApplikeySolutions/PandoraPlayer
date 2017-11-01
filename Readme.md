@@ -54,9 +54,13 @@ navigationController?.present(playerVC, animated: true, completion: nil)
 
 # Release Notes
 
-Version 1.1
+Version 1.0
 
 - Release version.
+
+Version 1.1
+
+- Added Xcode 9 and Swift 4 support 
 
 # Contact Us
 

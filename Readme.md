@@ -1,4 +1,4 @@
-![ios](https://cocoapod-badges.herokuapp.com/v/PandoraPlayer/badge.png) ![ios](https://cocoapod-badges.herokuapp.com/p/PandoraPlayer/badge.png) ![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg) ![GitHub license](https://cocoapod-badges.herokuapp.com/l/PandoraPlayer/badge.(png|svg))
+![ios](https://cocoapod-badges.herokuapp.com/v/PandoraPlayer/badge.png) ![ios](https://cocoapod-badges.herokuapp.com/p/PandoraPlayer/badge.png) ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-orange.svg) ![GitHub license](https://cocoapod-badges.herokuapp.com/l/PandoraPlayer/badge.(png|svg))
 
 Made by [Applikey Solutions](https://applikeysolutions.com)
 
@@ -37,7 +37,7 @@ Find this [project on Dribbble](https://dribbble.com/shots/3456425-Music-waves)
 ### [CocoaPods](https://github.com/CocoaPods/CocoaPods)
 Add the following line in your `Podfile`.
 ```
-pod "PandoraPlayer"
+pod 'PandoraPlayer'
 ```
 
 # Usage
@@ -57,6 +57,10 @@ navigationController?.present(playerVC, animated: true, completion: nil)
 Version 1.0
 
 - Release version.
+
+Version 1.1
+
+- Added Xcode 9 and Swift 4 support 
 
 # Contact Us
 

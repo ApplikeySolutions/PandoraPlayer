@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AudioKit
+import AudioKitUI
 
 class WaveVisualizer: ViewWithXib {
 

@@ -44,11 +44,11 @@ class Song {
         try? FileManager.default.removeItem(at: fileUrl)
         let exportSession = AVAssetExportSession(asset: AVAsset(url: url), presetName: AVAssetExportPresetAppleM4A)
         exportSession?.shouldOptimizeForNetworkUse = true
-        exportSession?.outputFileType = AVFileTypeAppleM4A
+        exportSession?.outputFileType = AVFileType.m4a
         exportSession?.outputURL = fileUrl
         
-        exportSession?.exportAsynchronously(completionHandler: { _ in
-            DispatchQueue.main.async(execute: { _ in
+        exportSession?.exportAsynchronously(completionHandler: {
+            DispatchQueue.main.async(execute: {
                 song.url = fileUrl
                 completion?(song)
             })

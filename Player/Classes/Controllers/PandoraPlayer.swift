@@ -200,7 +200,7 @@ open class PandoraPlayer: UIViewController {
         
         playerVC.library = outputItems
 
-        group.notify(queue: DispatchQueue.main) { _ in
+        group.notify(queue: DispatchQueue.main) {
             assert(outputItems.count > 0)
             playerVC.library = outputItems
             playerVC.readyForPlay()
@@ -243,7 +243,7 @@ open class PandoraPlayer: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = UIColor.white
         title = nowPlaying
     }
@@ -457,7 +457,7 @@ open class PandoraPlayer: UIViewController {
     
     @IBAction func closeButtonDidClick(_ sender: Any) {
         player = nil
-        onClose?()
+        onClose?(())
     }
     
     

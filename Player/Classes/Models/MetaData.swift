@@ -25,7 +25,7 @@ class MetaData {
 		duration = CMTimeGetSeconds(playerItem.asset.duration)
 
         for metadataItem in commonMetadata {
-            switch metadataItem.commonKey! {
+            switch metadataItem.commonKey?.rawValue ?? "" {
             case "title":
                 title = metadataItem.stringValue
             case "creationDate":

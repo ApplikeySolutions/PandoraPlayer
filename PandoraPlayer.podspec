@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PandoraPlayer"
-  s.version      = "1.1"
+  s.version      = "1.2"
   s.summary      = "Music Player for iOS"
   s.description  = "A simple iOS music player library written in Swift"
 

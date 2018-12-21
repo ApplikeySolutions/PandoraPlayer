@@ -27,7 +27,7 @@ class CenterCellCollectionViewFlowLayout: UICollectionViewFlowLayout {
 		
 		var candidateAttributes : UICollectionViewLayoutAttributes?
 		for attributes in attributesForVisibleCells {
-			if attributes.representedElementCategory == UICollectionElementCategory.cell {
+            if attributes.representedElementCategory == UICollectionView.ElementCategory.cell {
 				candidateAttributes = attributes
 			}
 		}

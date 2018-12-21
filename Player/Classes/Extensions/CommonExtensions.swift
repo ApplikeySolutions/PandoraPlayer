@@ -46,8 +46,8 @@ extension UILabel {
         if layer.animation(forKey: animation) == nil {
             let transition = CATransition()
             transition.duration = duration
-            transition.type = kCATransitionFade
-            transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+            transition.type = CATransitionType.fade
+            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
             layer.add(transition, forKey: animation)
         }
         self.text = text
@@ -60,8 +60,8 @@ extension CATransition {
     static func fading(_ duration: TimeInterval) -> CATransition {
         let transition = CATransition()
         transition.duration = duration
-        transition.type = kCATransitionFade
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = CATransitionType.fade
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         return transition
     }
 }

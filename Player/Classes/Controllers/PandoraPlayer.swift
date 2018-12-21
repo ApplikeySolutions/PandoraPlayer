@@ -127,7 +127,7 @@ open class PandoraPlayer: UIViewController {
      */
     public static func configure(withPaths paths: [String]) -> PandoraPlayer {
         let playerVC = pandoraPlayerInstance()
-        let songItems = paths.flatMap({ return Song(path: $0) })
+        let songItems = paths.compactMap({ return Song(path: $0) })
         playerVC.library = songItems
         playerVC.readyForPlay()
         return playerVC
@@ -153,7 +153,7 @@ open class PandoraPlayer: UIViewController {
      */
     public static func configure(withAVItems items: [AVPlayerItem]) -> PandoraPlayer {
         let playerVC = pandoraPlayerInstance()
-        let songItems = items.flatMap({ return Song(withAVPlayerItem: $0) })
+        let songItems = items.compactMap({ return Song(withAVPlayerItem: $0) })
         playerVC.library = songItems
         playerVC.readyForPlay()
         return playerVC

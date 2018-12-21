@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
 
   s.author       = { "Applikey Solutions" => "welcome@applikeysolutions.com" }
   s.platform     = :ios, "9.0"
+  s.static_framework = true
 
   s.source       = { :git => "https://github.com/AppliKeySolutions/PandoraPlayer.git", :tag => "#{s.version}" }
 

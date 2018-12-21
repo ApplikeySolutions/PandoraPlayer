@@ -232,6 +232,7 @@ open class PandoraPlayer: UIViewController {
         configureNavigationBar()
 		configurePlayer()
         configurePlayerSongListView()
+        configureBackgroundImage()
     }
 	
     private func configurePlayerSongListView() {

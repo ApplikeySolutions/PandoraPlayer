@@ -22,7 +22,7 @@ class PlayerSlider: ViewWithXib {
     
     // MARK: Properties
     
-    var delegate: PlayerSliderProtocol?
+    weak var delegate: PlayerSliderProtocol?
     var duration: TimeInterval = TimeInterval() {
         didSet {
             updateProgress(self.progress)

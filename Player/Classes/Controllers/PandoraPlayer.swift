@@ -201,7 +201,6 @@ open class PandoraPlayer: UIViewController {
         playerVC.library = outputItems
 
         group.notify(queue: DispatchQueue.main) {
-            assert(outputItems.count > 0)
             playerVC.library = outputItems
             playerVC.readyForPlay()
         }
@@ -559,6 +558,10 @@ extension PandoraPlayer: PlayerControlsDelegate {
 
 extension PandoraPlayer: PlayerSliderProtocol {
 	func onValueChanged(progress: Float, timePast: TimeInterval) {
+        guard player.audioFile != nil else {
+            sliderView.progress = 0
+            return
+        }
 		beeingSeek = true
 		let frame = Int64(Float(player.audioFile.totalFrames) * progress)
 		self.player.seek(toFrame: frame)

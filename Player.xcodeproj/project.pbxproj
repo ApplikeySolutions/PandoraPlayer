@@ -106,7 +106,6 @@
 			children = (
 				F519AE031F2B26870067FE47 /* Classes */,
 				F519AE291F2B26870067FE47 /* Resources */,
-				F519AE2D1F2B26870067FE47 /* Supporting Files */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -253,13 +252,6 @@
 				F519AE2C1F2B26870067FE47 /* Player.h */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		F519AE2D1F2B26870067FE47 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F519B7921F2B371D0067FE47 /* Storyboards */ = {

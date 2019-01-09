@@ -336,6 +336,9 @@ open class PandoraPlayer: UIViewController {
 	}
 	
 	private func configurePlayer() {
+        if !self.isViewLoaded {
+            _ = self.view // Make sure to load views first
+        }
         configurePlayerControls()
         configurePlayerTimeSlider()
 		player = EZAudioPlayer()

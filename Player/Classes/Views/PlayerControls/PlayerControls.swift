@@ -110,10 +110,10 @@ class PlayerControls: ViewWithXib {
             
             playButton.addSubview(activityIndicatorView)
             
-            let xCenterConstraint = NSLayoutConstraint(item: playButton, attribute: .centerX, relatedBy: .equal, toItem: activityIndicatorView, attribute: .centerX, multiplier: 1, constant: 0)
+            let xCenterConstraint = NSLayoutConstraint(item: playButton!, attribute: .centerX, relatedBy: .equal, toItem: activityIndicatorView, attribute: .centerX, multiplier: 1, constant: 0)
             playButton.addConstraint(xCenterConstraint)
             
-            let yCenterConstraint = NSLayoutConstraint(item: playButton, attribute: .centerY, relatedBy: .equal, toItem: activityIndicatorView, attribute: .centerY, multiplier: 1, constant: 0)
+            let yCenterConstraint = NSLayoutConstraint(item: playButton!, attribute: .centerY, relatedBy: .equal, toItem: activityIndicatorView, attribute: .centerY, multiplier: 1, constant: 0)
             
             playButton.addConstraint(yCenterConstraint)
             

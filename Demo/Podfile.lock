@@ -1,0 +1,28 @@
+PODS:
+  - AudioKit (4.10.1):
+    - AudioKit/Core (= 4.10.1)
+    - AudioKit/UI (= 4.10.1)
+  - AudioKit/Core (4.10.1)
+  - AudioKit/UI (4.10.1):
+    - AudioKit/Core
+  - PandoraPlayer (1.3):
+    - AudioKit (~> 4.5)
+
+DEPENDENCIES:
+  - PandoraPlayer (from `..`)
+
+SPEC REPOS:
+  trunk:
+    - AudioKit
+
+EXTERNAL SOURCES:
+  PandoraPlayer:
+    :path: ".."
+
+SPEC CHECKSUMS:
+  AudioKit: b8e508a0af3dc7d53caf0ca1002b187a662f949e
+  PandoraPlayer: 83e5993169f43f67c9d35960055675df81575703
+
+PODFILE CHECKSUM: bbcfa087c0e05b35ea9f1d2184ff4ecfcaf641d1
+
+COCOAPODS: 1.9.3

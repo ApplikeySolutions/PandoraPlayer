@@ -106,7 +106,6 @@
 			children = (
 				F519AE031F2B26870067FE47 /* Classes */,
 				F519AE291F2B26870067FE47 /* Resources */,
-				F519AE2D1F2B26870067FE47 /* Supporting Files */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -255,13 +254,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		F519AE2D1F2B26870067FE47 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		F519B7921F2B371D0067FE47 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +316,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -540,7 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.applikeySolutions.Player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -561,7 +554,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.applikeySolutions.Player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

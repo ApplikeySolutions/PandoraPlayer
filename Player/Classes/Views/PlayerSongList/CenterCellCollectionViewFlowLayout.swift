@@ -27,7 +27,7 @@ class CenterCellCollectionViewFlowLayout: UICollectionViewFlowLayout {
 		
 		var candidateAttributes : UICollectionViewLayoutAttributes?
 		for attributes in attributesForVisibleCells {
-			if attributes.representedElementCategory == UICollectionElementCategory.cell {
+            if attributes.representedElementCategory == UICollectionView.ElementCategory.cell {
 				candidateAttributes = attributes
 			}
 		}
@@ -37,7 +37,7 @@ class CenterCellCollectionViewFlowLayout: UICollectionViewFlowLayout {
 		}
 		
 		let w : CGFloat = attributes.frame.width
-		let targetColumn = floor(proposedContentOffset.x/w + 1)//(velocity.x > 0 ? 1 : 0))
+		let targetColumn = floor(proposedContentOffset.x/(w + self.minimumLineSpacing) + 1)//(velocity.x > 0 ? 1 : 0))
 		let pX = targetColumn * w - cv.contentInset.left + targetColumn * self.minimumLineSpacing
 		
 		mostRecentOffset = CGPoint(x: CGFloat(pX), y: attributes.center.y)

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Pandora Player-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="PandoraPlayer" id="BYZ-38-t0r" customClass="PandoraPlayer" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PandoraPlayer" id="BYZ-38-t0r" customClass="PandoraPlayer" customModule="PandoraPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -34,7 +35,7 @@
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34S-c3-ovO" customClass="PlayerSongList" customModule="Player" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34S-c3-ovO" customClass="PlayerSongList" customModule="PandoraPlayer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="278"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7U-qY-TsG">
@@ -66,19 +67,19 @@
                                     <constraint firstAttribute="height" constant="60" id="rkE-vE-x0e"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q84-LD-kx5" customClass="WaveVisualizer" customModule="Player" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q84-LD-kx5" customClass="WaveVisualizer" customModule="PandoraPlayer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="418" width="375" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="FXg-TP-iIR"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ct9-6Z-w3X" customClass="PlayerSlider" customModule="Player" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ct9-6Z-w3X" customClass="PlayerSlider" customModule="PandoraPlayer" customModuleProvider="target">
                                 <rect key="frame" x="15" y="507" width="345" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="PAA-fE-uWo"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKL-XX-3mQ" customClass="PlayerControls" customModule="Player" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKL-XX-3mQ" customClass="PlayerControls" customModule="PandoraPlayer" customModuleProvider="target">
                                 <rect key="frame" x="30" y="567" width="315" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="WNV-ei-yaZ"/>
@@ -87,8 +88,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijy-pL-ZJp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgi-yz-Yij">
+                                        <rect key="frame" x="15" y="22" width="345" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kf1-UH-5LZ">
-                                        <rect key="frame" x="8" y="10" width="45" height="45"/>
+                                        <rect key="frame" x="8" y="9.5" width="45" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="Vxg-eU-TD9"/>
                                             <constraint firstAttribute="height" constant="45" id="znl-YD-0uG"/>
@@ -98,12 +105,6 @@
                                             <action selector="closeButtonDidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jnu-LD-aC5"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgi-yz-Yij">
-                                        <rect key="frame" x="15" y="22.5" width="345" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="kf1-UH-5LZ" firstAttribute="leading" secondItem="ijy-pL-ZJp" secondAttribute="leading" constant="8" id="UJ7-s7-m0q"/>
@@ -175,6 +176,6 @@
     </scenes>
     <resources>
         <image name="cancel-music" width="14" height="14"/>
-        <image name="default_background" width="750" height="1334"/>
+        <image name="default_background" width="562.5" height="1000.5"/>
     </resources>
 </document>

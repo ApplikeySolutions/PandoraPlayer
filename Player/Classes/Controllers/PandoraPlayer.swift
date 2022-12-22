@@ -127,7 +127,7 @@ open class PandoraPlayer: UIViewController {
      */
     public static func configure(withPaths paths: [String]) -> PandoraPlayer {
         let playerVC = pandoraPlayerInstance()
-        let songItems = paths.flatMap({ return Song(path: $0) })
+        let songItems = paths.compactMap({ return Song(path: $0) })
         playerVC.library = songItems
         playerVC.readyForPlay()
         return playerVC
@@ -153,7 +153,7 @@ open class PandoraPlayer: UIViewController {
      */
     public static func configure(withAVItems items: [AVPlayerItem]) -> PandoraPlayer {
         let playerVC = pandoraPlayerInstance()
-        let songItems = items.flatMap({ return Song(withAVPlayerItem: $0) })
+        let songItems = items.compactMap({ return Song(withAVPlayerItem: $0) })
         playerVC.library = songItems
         playerVC.readyForPlay()
         return playerVC
@@ -201,7 +201,6 @@ open class PandoraPlayer: UIViewController {
         playerVC.library = outputItems
 
         group.notify(queue: DispatchQueue.main) {
-            assert(outputItems.count > 0)
             playerVC.library = outputItems
             playerVC.readyForPlay()
         }
@@ -232,6 +231,7 @@ open class PandoraPlayer: UIViewController {
         configureNavigationBar()
 		configurePlayer()
         configurePlayerSongListView()
+        configureBackgroundImage()
     }
 	
     private func configurePlayerSongListView() {
@@ -243,7 +243,7 @@ open class PandoraPlayer: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = UIColor.white
         title = nowPlaying
     }
@@ -335,6 +335,9 @@ open class PandoraPlayer: UIViewController {
 	}
 	
 	private func configurePlayer() {
+        if !self.isViewLoaded {
+            _ = self.view // Make sure to load views first
+        }
         configurePlayerControls()
         configurePlayerTimeSlider()
 		player = EZAudioPlayer()
@@ -506,7 +509,7 @@ extension PandoraPlayer: PlayerSongListDelegate {
             guard library[index].colors == nil else { continue }
             guard tasks[index] == nil else { continue }
             var item: DispatchWorkItem!
-            item = DispatchWorkItem(block: {
+            item = DispatchWorkItem(block: {[unowned self] in 
                 guard !item.isCancelled else { return }
                 guard let image = self.library[index].metadata?.artwork else { return }
                 guard !item.isCancelled else { return }
@@ -555,6 +558,10 @@ extension PandoraPlayer: PlayerControlsDelegate {
 
 extension PandoraPlayer: PlayerSliderProtocol {
 	func onValueChanged(progress: Float, timePast: TimeInterval) {
+        guard player.audioFile != nil else {
+            sliderView.progress = 0
+            return
+        }
 		beeingSeek = true
 		let frame = Int64(Float(player.audioFile.totalFrames) * progress)
 		self.player.seek(toFrame: frame)

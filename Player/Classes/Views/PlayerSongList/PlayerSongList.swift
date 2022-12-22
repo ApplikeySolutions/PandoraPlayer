@@ -55,7 +55,7 @@ class PlayerSongList: ViewWithXib {
         insets.left = self.frame.size.width * leftInsetCoefficient
         insets.right = insets.left
         self.collectionView.contentInset = insets
-        self.collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        self.collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         DispatchQueue.main.async {
             self.updateCellSizes()
         }
@@ -71,7 +71,7 @@ class PlayerSongList: ViewWithXib {
 		collectionView.backgroundColor = UIColor.clear
 		collectionView.backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
 		collectionView.register(UINib(nibName: RoundedPictureCollectionViewCell.className, bundle: Bundle(for: self.classForCoder)), forCellWithReuseIdentifier: RoundedPictureCollectionViewCell.className)
-		collectionView.decelerationRate = decelerationRate
+        collectionView.decelerationRate = UIScrollView.DecelerationRate(rawValue: decelerationRate)
 		
 		let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
 		tap.numberOfTapsRequired = numberOfTapsRequired

@@ -506,7 +506,7 @@ extension PandoraPlayer: PlayerSongListDelegate {
             guard library[index].colors == nil else { continue }
             guard tasks[index] == nil else { continue }
             var item: DispatchWorkItem!
-            item = DispatchWorkItem(block: {
+            item = DispatchWorkItem(block: {[unowned self] in 
                 guard !item.isCancelled else { return }
                 guard let image = self.library[index].metadata?.artwork else { return }
                 guard !item.isCancelled else { return }
